@@ -11,3 +11,6 @@ describe 'Numerals', ->
 
   it 'should convert 5 to V', ->
     expect(@numerals.romanize(5)).to.eq 'V'
+
+  it 'should convert 10 to X', ->
+    expect(@numerals.romanize(10)).to.eq 'X'
