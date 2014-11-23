@@ -1,9 +1,20 @@
 class Numerals
 
+
+
+
   romanize: (number) ->
-    return 'X' if number == 10
-    return 'V' if number == 5
-    return 'I' 
+    romans = ''
+    numberals = (min, roman) ->
+      while number >= min
+        number -= min
+        romans += roman
+ 
+    numberals 10, 'X'
+    numberals 5, 'V'
+    numberals 1, 'I'
+    romans
+
 
 
 module.exports = Numerals
