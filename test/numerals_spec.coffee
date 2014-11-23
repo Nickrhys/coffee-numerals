@@ -18,3 +18,8 @@ describe 'Numerals', ->
   it 'should convert 25 to XXV', ->
     expect(@numerals.romanize(25)).to.eq 'XXV'
  
+  it 'should convert 24 to XXIV', ->
+    expect(@numerals.romanize(24)).to.eq 'XXIV'
+
+  it 'should convert 29 to XXIV', ->
+    expect(@numerals.romanize(29)).to.eq 'XXIX'

@@ -1,20 +1,17 @@
 class Numerals
 
-
-
-
   romanize: (number) ->
-    romans = ''
+    output = ''
     numberals = (min, roman) ->
       while number >= min
         number -= min
-        romans += roman
+        output += roman
  
     numberals 10, 'X'
+    numberals 9, 'IX'
     numberals 5, 'V'
+    numberals 4, 'IV'
     numberals 1, 'I'
-    romans
-
-
+    output
 
 module.exports = Numerals
