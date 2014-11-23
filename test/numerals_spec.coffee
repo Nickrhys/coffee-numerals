@@ -2,9 +2,12 @@ chai = require 'chai'
 expect = chai.expect
 Numerals =  require '../src/numerals'
 
-describe 'Numerals', ->
+describe 'Numerals', ->  
+  before ->
+    @numerals = new Numerals
 
   it 'should convert 1 into I', ->
-    numerals = new Numerals
-    expect(numerals.romanize(1)).to.eq 'I'
+    expect(@numerals.romanize(1)).to.eq 'I'
 
+  it 'should convert 5 to V', ->
+    expect(@numerals.romanize(5)).to.eq 'V'
