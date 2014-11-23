@@ -23,3 +23,15 @@ describe 'Numerals', ->
 
   it 'should convert 29 to XXIV', ->
     expect(@numerals.romanize(29)).to.eq 'XXIX'
+  
+  it 'should convert 444 to CDXLIV', ->
+    expect(@numerals.romanize(444)).to.eq 'CDXLIV'
+
+  it 'should convert 590 to DXC', ->
+    expect(@numerals.romanize(590)).to.eq 'DXC'
+  
+  it 'should convert 2954 to MMCMLIV', ->
+    expect(@numerals.romanize(2954)).to.eq 'MMCMLIV'
+
+
+
